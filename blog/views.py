@@ -37,7 +37,7 @@ def post_share(request, post_id):
             subject = f"{cd['name']} recommends you read {post.title} "
             message = f"Read {post.title} at {post_url} \n\n " \
                       f"{cd['name']}\'s comments : {cd['comments']} "
-            send_mail(subject, message, 'email_sender', [cd['to']])
+            send_mail(subject, message, 'arnoldrod9696@gmail.com', [cd['to']])
             sent = True
     else:
         form = EmailPostForm()
